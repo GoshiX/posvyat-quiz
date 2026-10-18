@@ -1,0 +1,518 @@
+{
+  "version": 1,
+  "sourceFolder": "https://drive.google.com/drive/folders/1nABe9S72blYLPg5bafyJh_hJsz-wbsOs",
+  "groups": [
+    {
+      "id": "Б05-601",
+      "number": "Б05-601",
+      "driveId": "1-gIQWhzYYxOr4TR92o0HLLxB2INCBZu2",
+      "input": "source/Б05-601.mp4",
+      "segments": [
+        [
+          12,
+          16
+        ],
+        [
+          48,
+          52
+        ],
+        [
+          87,
+          95
+        ]
+      ]
+    },
+    {
+      "id": "Б05-602",
+      "number": "Б05-602",
+      "driveId": "1xBNEbrDsX4jO0msIINsInL9NxSNT6S_q",
+      "input": "source/Б05-602.mp4",
+      "segments": [
+        [
+          24,
+          28
+        ],
+        [
+          64,
+          76
+        ]
+      ]
+    },
+    {
+      "id": "Б05-603",
+      "number": "Б05-603",
+      "driveId": "1nVO6B1P9-brz3OeNtjmqAuWkfIScjR_p",
+      "input": "source/Б05-603.mp4",
+      "segments": [
+        [
+          9,
+          13
+        ],
+        [
+          48,
+          53
+        ],
+        [
+          18,
+          23
+        ]
+      ]
+    },
+    {
+      "id": "Б05-604",
+      "number": "Б05-604",
+      "driveId": "15Ao6YIgJMvEk-E9lFUDj_89J_ecXCL7Y",
+      "input": "source/Б05-604.mp4",
+      "segments": [
+        [
+          35,
+          42
+        ],
+        [
+          82,
+          90
+        ]
+      ]
+    },
+    {
+      "id": "Б05-605",
+      "number": "Б05-605",
+      "driveId": "1uqYKjc3p_fvEXlRnnHJmyKUqEg6BSk3F",
+      "input": "source/Б05-605.mp4",
+      "segments": [
+        [
+          37,
+          40
+        ],
+        [
+          81,
+          89
+        ]
+      ]
+    },
+    {
+      "id": "Б05-606",
+      "number": "Б05-606",
+      "driveId": "1iASkIukX2NsOxAvfDNZgSJkCRRZYWbzT",
+      "input": "source/Б05-606.mp4",
+      "segments": [
+        [
+          9,
+          16
+        ],
+        [
+          44,
+          48
+        ],
+        [
+          63,
+          66
+        ]
+      ]
+    },
+    {
+      "id": "Б05-607",
+      "number": "Б05-607",
+      "driveId": "1ecBscV-4D0T4AYRVI4zB_bMrNvP8L-ua",
+      "input": "source/Б05-607.mp4",
+      "segments": [
+        [
+          31,
+          35
+        ],
+        [
+          44,
+          48
+        ],
+        [
+          73,
+          81
+        ]
+      ]
+    },
+    {
+      "id": "Б05-608",
+      "number": "Б05-608",
+      "driveId": "12mgMWO8euQfTuXCCvz9zG2PsrShtCkny",
+      "input": "source/Б05-608.mp4",
+      "segments": [
+        [
+          21,
+          25
+        ],
+        [
+          36,
+          40
+        ],
+        [
+          102,
+          108
+        ]
+      ]
+    },
+    {
+      "id": "Б05-609",
+      "number": "Б05-609",
+      "driveId": "1AJ7wUF4sWpdb5WMb2FltpqXwDWByHsQX",
+      "input": "source/Б05-609.mp4",
+      "segments": [
+        [
+          7,
+          11
+        ],
+        [
+          24,
+          31
+        ],
+        [
+          91,
+          95
+        ]
+      ]
+    },
+    {
+      "id": "Б05-611",
+      "number": "Б05-611",
+      "driveId": "181zTEq5DlzE_wCDxN2CPTWbBaYcFRt2M",
+      "input": "source/Б05-611.mp4",
+      "segments": [
+        [
+          25,
+          30
+        ],
+        [
+          33,
+          35
+        ],
+        [
+          42,
+          45
+        ],
+        [
+          50,
+          52
+        ],
+        [
+          84,
+          86
+        ]
+      ]
+    },
+    {
+      "id": "Б05-612",
+      "number": "Б05-612",
+      "driveId": "1sEfxkcSOsA3z_b5NwkaGhXoajCl_GLdP",
+      "input": "source/Б05-612.mov",
+      "segments": [
+        [
+          13,
+          20
+        ],
+        [
+          50,
+          57
+        ]
+      ]
+    },
+    {
+      "id": "Б05-613",
+      "number": "Б05-613",
+      "driveId": "1ZgBZSDcJfLnFp3Hp71uatnywBT-X18I4",
+      "input": "source/Б05-613.mp4",
+      "segments": [
+        [
+          25,
+          28
+        ],
+        [
+          34,
+          39
+        ],
+        [
+          69,
+          74
+        ],
+        [
+          80,
+          82
+        ]
+      ]
+    },
+    {
+      "id": "Б05-614",
+      "number": "Б05-614",
+      "driveId": "1KVFwFB_b71L8JVajGb04IhvVmv-wcVFJ",
+      "input": "source/Б05-614.mp4",
+      "segments": [
+        [
+          10,
+          13
+        ],
+        [
+          62,
+          67
+        ],
+        [
+          84,
+          90
+        ]
+      ]
+    },
+    {
+      "id": "Б05-615",
+      "number": "Б05-615",
+      "driveId": "1zJ0O28oLjL7z9SG9ekJgOFuFDI_FV4hF",
+      "input": "source/Б05-615.mp4",
+      "segments": [
+        [
+          8,
+          16
+        ],
+        [
+          67,
+          70
+        ],
+        [
+          88,
+          93
+        ]
+      ]
+    },
+    {
+      "id": "Б05-616",
+      "number": "Б05-616",
+      "driveId": "1_WeZR8T9GoB2uyGXyHkitBmFId0sWjHJ",
+      "input": "source/Б05-616.mp4",
+      "segments": [
+        [
+          9,
+          15
+        ],
+        [
+          35,
+          40
+        ],
+        [
+          91,
+          95
+        ]
+      ]
+    },
+    {
+      "id": "Б05-617",
+      "number": "Б05-617",
+      "driveId": "1h_fIjdX9v4ajjsubdKyhgpWd5DJIYtYW",
+      "input": "source/Б05-617.mp4",
+      "segments": [
+        [
+          30,
+          34
+        ],
+        [
+          62,
+          72
+        ]
+      ]
+    },
+    {
+      "id": "Б05-618",
+      "number": "Б05-618",
+      "driveId": "1J13NuR0sKsI7rQihz8_Ju7dDY5bhFe2S",
+      "input": "source/Б05-618.mp4",
+      "segments": [
+        [
+          1,
+          4
+        ],
+        [
+          45,
+          50
+        ],
+        [
+          55,
+          61
+        ]
+      ]
+    },
+    {
+      "id": "Б05-621",
+      "number": "Б05-621",
+      "driveId": "1LsjArAIU7fwxv_LgqPTfJD8gmDDNOT4S",
+      "input": "source/Б05-621.mp4",
+      "segments": [
+        [
+          23,
+          27
+        ],
+        [
+          64,
+          75
+        ]
+      ]
+    },
+    {
+      "id": "Б05-622",
+      "number": "Б05-622",
+      "driveId": "1Kbk-5a9PeaJ0sEIz8Kp-YNe36qYChJXb",
+      "input": "source/Б05-622.mp4",
+      "segments": [
+        [
+          16,
+          20
+        ],
+        [
+          46,
+          51
+        ],
+        [
+          69,
+          74
+        ]
+      ]
+    },
+    {
+      "id": "Б05-623",
+      "number": "Б05-623",
+      "driveId": "1qeyryyWo6rabyNGysvb-5RqY1W2HmGrD",
+      "input": "source/Б05-623.mp4",
+      "segments": [
+        [
+          28,
+          43
+        ]
+      ]
+    },
+    {
+      "id": "Б05-624",
+      "number": "Б05-624",
+      "driveId": "1LGG6xZNzi3gTQW6J4VRK70Q4WVxBYJVB",
+      "input": "source/Б05-624.mp4",
+      "segments": [
+        [
+          6,
+          10
+        ],
+        [
+          28,
+          33
+        ],
+        [
+          75,
+          81
+        ]
+      ]
+    },
+    {
+      "id": "Б05-625",
+      "number": "Б05-625",
+      "driveId": "19YfWqmzsYC8CnL9e8lFBAbytTxvv-l7O",
+      "input": "source/Б05-625.mp4",
+      "segments": [
+        [
+          3,
+          7
+        ],
+        [
+          32,
+          37
+        ],
+        [
+          72,
+          76
+        ]
+      ]
+    },
+    {
+      "id": "Б05-626",
+      "number": "Б05-626",
+      "driveId": "1g3SHdyotwPFLl0p39UN3aRzVg-ndCLSN",
+      "input": "source/Б05-626.mp4",
+      "segments": [
+        [
+          3,
+          7
+        ],
+        [
+          26,
+          30
+        ],
+        [
+          52,
+          61
+        ]
+      ]
+    },
+    {
+      "id": "Б05-627",
+      "number": "Б05-627",
+      "driveId": "1gonTaHu1KBkD9cfqWxzLhw7xTNiu6cW5",
+      "input": "source/Б05-627.mp4",
+      "segments": [
+        [
+          7,
+          12
+        ],
+        [
+          32,
+          34
+        ],
+        [
+          52,
+          60
+        ]
+      ]
+    },
+    {
+      "id": "Б05-628",
+      "number": "Б05-628",
+      "driveId": "1XWOWwgbq3wGI_CcK1pWrIs4EsSGVzsXF",
+      "input": "source/Б05-628.mp4",
+      "segments": [
+        [
+          35,
+          40
+        ],
+        [
+          56,
+          62
+        ],
+        [
+          68,
+          72
+        ]
+      ]
+    },
+    {
+      "id": "Б05-631",
+      "number": "Б05-631",
+      "driveId": "1uJo8ISKxXSWuA864LgTLvwBjpc8mvF4G",
+      "input": "source/Б05-631.mp4",
+      "segments": [
+        [
+          49,
+          64
+        ]
+      ]
+    },
+    {
+      "id": "Б05-632",
+      "number": "Б05-632",
+      "driveId": "1AFnMx5orvzN2Pb5ZpPYG_8I62Qvzz9Qw",
+      "input": "source/Б05-632.mp4",
+      "segments": [
+        [
+          21,
+          26
+        ],
+        [
+          59,
+          63
+        ],
+        [
+          85,
+          92
+        ]
+      ]
+    }
+  ]
+}

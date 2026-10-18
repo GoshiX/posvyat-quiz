@@ -1,0 +1,17 @@
+services:
+  quiz:
+    build:
+      context: .
+      args:
+        PORT: ${PORT:-3000}
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
+    environment:
+      PORT: ${PORT:-3000}
+      ADMIN_USER: ${ADMIN_USER:-admin}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-quiz-admin-2026}
+    volumes:
+      - quiz-data:/app/data
+    restart: unless-stopped
+volumes:
+  quiz-data:

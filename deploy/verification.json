@@ -1,0 +1,539 @@
+{
+  "date": "2026-10-17",
+  "server": "https://posvyat2026.h4ck.me",
+  "deployment": {
+    "port": 443,
+    "runtime": "Node.js 24.22.0",
+    "service": "initiation-quiz.service",
+    "autostart": true,
+    "httpPort": 80,
+    "httpRedirectToHttps": true,
+    "proxy": "Caddy 2.11.7",
+    "proxyService": "quiz-caddy.service",
+    "appListen": "127.0.0.1:3000"
+  },
+  "virtualParticipants": 500,
+  "rehearsalGroups": 27,
+  "loadTransport": "HTTP over an SSH tunnel from a separate machine",
+  "scope": "Short synthetic API check. Does not measure heavy uploaded images/GIFs, real Yandex authorization, or mobile network conditions.",
+  "loadChecks": [
+    {
+      "name": "quiz polling: 500 users every second",
+      "requests": 7500,
+      "errors": 0,
+      "durationSeconds": 15.05,
+      "requestsPerSecond": 498.2,
+      "p95ms": 64,
+      "maxms": 121
+    },
+    {
+      "name": "500 simultaneous answer submissions",
+      "requests": 500,
+      "errors": 0,
+      "durationSeconds": 1.75,
+      "requestsPerSecond": 285.1,
+      "p95ms": 1596,
+      "maxms": 1665
+    },
+    {
+      "name": "voting polling: 500 users every second",
+      "requests": 5000,
+      "errors": 0,
+      "durationSeconds": 10.06,
+      "requestsPerSecond": 497.2,
+      "p95ms": 69,
+      "maxms": 136
+    },
+    {
+      "name": "500 simultaneous complete ballots",
+      "requests": 500,
+      "errors": 0,
+      "durationSeconds": 2.2,
+      "requestsPerSecond": 227.4,
+      "p95ms": 2052,
+      "maxms": 2108
+    }
+  ],
+  "restartPersistence": "Passed: scores, publication stage and revealed groups unchanged",
+  "publicBrowser": "Passed on HTTPS without certificate bypass: admin login/settings/logout, mobile login and HTTP redirect, rehearsal participant and 27-group projector; Secure HttpOnly cookies; no JavaScript errors",
+  "https": {
+    "certificate": "Let’s Encrypt IP SAN, shortlived profile",
+    "automatedRenewal": "Caddy certificate maintenance with persistent state",
+    "trustedBrowserTls": true,
+    "secureHttpOnlyCookies": true,
+    "persistedAfterServiceRestart": true,
+    "publicUrl": "https://posvyat2026.h4ck.me",
+    "proxyClientAddress": "Loopback proxy only; direct forwarded header spoof ignored"
+  },
+  "automatedTests": {
+    "httpAndBrowser": 29,
+    "unitOnServerNode24": 7,
+    "result": "passed"
+  },
+  "restartEvent": {
+    "deployed": true,
+    "publicHttpsBrowser": "Passed: cancel/confirm, retained phone session, answer again, cleared projector, unchanged configuration and production",
+    "rehearsalFinalState": "setup, blank projector, no answers/results/ballots/reveals",
+    "productionDatabaseFingerprint": "unchanged",
+    "preserved": "groups, participants and codes, joined status, questions, settings, base scores, images and active sessions",
+    "staleRunProtection": "API rejects old answers/votes and supplied stale admin actions; browser drafts scoped per run"
+  },
+  "domain": {
+    "name": "posvyat2026.h4ck.me",
+    "ipv4": "91.84.97.114",
+    "dns": "A record verified with system resolver and Google DNS; no AAAA record",
+    "originalFailure": "TLS alert: only IP site/certificate configured in Caddy",
+    "certificate": "Trusted Let’s Encrypt, DNS SAN posvyat2026.h4ck.me",
+    "certificateExpiresUtc": "2027-01-15 00:14:20",
+    "automaticRenewal": true,
+    "httpRedirect": true,
+    "ipStillAccessible": true,
+    "oauthRedirectUri": "https://posvyat2026.h4ck.me/auth/yandex/callback",
+    "browserVerification": "Passed: admin and participant login, Secure HttpOnly cookies, projector, HTTP redirect, IP health and IP OAuth-start redirect to canonical domain",
+    "eventDataAndResults": "unchanged in production and rehearsal",
+    "yandexEnabledAtVerification": false
+  },
+  "productionUnchangedDuringLoadTest": true,
+  "productionImport": {
+    "date": "2026-10-17",
+    "csvRows": 488,
+    "participants": 464,
+    "participantsWithEmail": 463,
+    "excludedByOrganizer": 24,
+    "groups": 27,
+    "questions": 27,
+    "tableIcons": 27,
+    "baseScoreSum": 1081,
+    "letterSubgroupsMerged": true,
+    "questionsAndAnswers": "Matched supplied question order and bold answer choices; 605 correct value is 4",
+    "baseScores": "Taken exactly from final supplied column",
+    "rehearsalAndYandexSettings": "Exact pre/post-import snapshot match; import and thumbnail installation preserved rehearsal and global settings",
+    "assetValidation": "All 27 original Drive files retained with matching hashes; 27 WebP thumbnails (384px maximum, 685920 bytes total) verified by SHA-256",
+    "verification": "Every imported record compared with prepared data; local full event flow and projector rendering at 1920x1080 and 1280x720 passed; public HTTPS Chromium admin, anonymous screen and mobile login checks passed without starting production",
+    "backupDirectory": "/root/quiz-before-production-import",
+    "planSha256": "5252ed7a092e97c6a5af112f84b937c3850b42a5b7ef32fefea3a4546532ca88",
+    "browser": {
+      "admin": "groups, questions/correct answers, 464 participants, base scores and start button verified without starting event",
+      "all27IconsLoaded": true,
+      "iconLoadingSecondsIncludingScroll": 1.1,
+      "anonymousProjector": "blank",
+      "mobileLogin": "code and Yandex visible; no horizontal overflow",
+      "javascriptErrors": []
+    },
+    "finalPlanSha256": "6a738fcee0db182bf3e2698ddb6b95eb4624c8d1041069e38b2ac7c59ad7a52d",
+    "stageAtImportAndBrowserVerification": "setup; no answers or votes; public display blank",
+    "concurrentActivityAfterVerification": "Later read-only audit observed production progressing through questions and five rehearsal participants removed. Current event state and these subsequent changes were preserved."
+  },
+  "quizResultsAndPresentation": {
+    "date": "2026-10-17",
+    "resultsApi": "GET /api/quiz/results; ?env=rehearsal supported; no authentication; no-store; false/empty before reveal",
+    "animation": "highlight → hold base+quiz → integer point transfer with invariant sum → total+0 hold → fade +0 → rank animation → dim icon",
+    "publicDisplayMetadata": [
+      "runId",
+      "revealOrder",
+      "baseScore for main table"
+    ],
+    "participant": "Yandex first with official local logo, concise login, header divider and stable waiting emoji",
+    "localVerification": {
+      "fullSuiteBeforeFinalTransferRefinement": 47,
+      "finalProjectorCases": 16,
+      "coveredDistinctHttpAndBrowserCasesAcrossRuns": 53,
+      "node24ServerUnitCases": 7,
+      "result": "passed"
+    },
+    "reorderValidation": "Passed on copied production-shaped database: all 27 IDs reordered; content, roster, base scores, sessions and rehearsal preserved",
+    "requestedOrder": [
+      "Б05-615",
+      "Б05-604",
+      "Б05-616",
+      "Б05-625",
+      "Б05-607",
+      "Б05-609",
+      "Б05-631",
+      "Б05-623",
+      "Б05-612",
+      "Б05-602",
+      "Б05-606",
+      "Б05-618",
+      "Б05-624",
+      "Б05-617",
+      "Б05-626",
+      "Б05-621",
+      "Б05-627",
+      "Б05-614",
+      "Б05-611",
+      "Б05-601",
+      "Б05-622",
+      "Б05-613",
+      "Б05-603",
+      "Б05-628",
+      "Б05-632",
+      "Б05-608",
+      "Б05-605"
+    ],
+    "publicHttpsVerification": {
+      "api": {
+        "question": 0,
+        "ready": false,
+        "groups": {}
+      },
+      "productionQuestionOrder": "exactly matches all 27 requested IDs",
+      "firstQuestionGroup": "Б05-615",
+      "lastQuestionGroup": "Б05-605",
+      "productionCounts": {
+        "groups": 27,
+        "participants": 464,
+        "questions": 27
+      },
+      "rehearsalCounts": {
+        "groups": 2,
+        "participants": 3,
+        "questions": 3
+      },
+      "login": "official local logo loaded; Yandex first; requested text; no horizontal overflow",
+      "javascriptErrors": [],
+      "phaseAtCheck": "setup",
+      "runIdAtCheck": 1
+    },
+    "productionResetAndReorder": {
+      "approvedByOrganizer": true,
+      "previousRunId": 0,
+      "newRunId": 1,
+      "backupDirectory": "/root/quiz-before-ui-update-20261017-024514",
+      "preserved": "participants, groups, base scores, question contents, Yandex settings, sessions and rehearsal",
+      "verifiedAtDeployment": "setup; no answers/results/ballots/reveals; all 27 question positions exact"
+    },
+    "deployedFileHashes": "All 12 deployed file hashes matched tested versions before this final report update"
+  },
+  "joinedOnlyAutomaticAnswers": {
+    "date": "2026-10-17",
+    "rule": "At future question closure, assign a persisted random wrong answer only to abstainers who have ever logged in to that environment. Logout does not clear eligibility; late first login never changes closed results.",
+    "localVerification": {
+      "fullSuite": "53 passed; one projector timing assertion skipped the short zero phase",
+      "projectorRetest": "Passed after changing only the test wait to animation-frame polling",
+      "coveredHttpAndBrowserCases": 54,
+      "node24UnitCases": 7
+    },
+    "deployment": {
+      "backupDirectory": "/root/quiz-before-joined-rule-20261017-030157",
+      "dataTablesUnchangedAfterRestart": true,
+      "changedTables": [],
+      "states": {
+        "production": {
+          "phase": "question_open",
+          "runId": 2,
+          "currentQuestionId": "69c7e51f-bec2-430d-9430-3fad76ec966c",
+          "revision": 217
+        },
+        "rehearsal": {
+          "phase": "voting_closed",
+          "runId": 14,
+          "currentQuestionId": "1d790c12-66a4-4e6e-aafa-7301359b185e",
+          "revision": 2761
+        }
+      },
+      "deployedFiles": 5,
+      "hashesVerified": true
+    },
+    "publicHttpsVerification": {
+      "health": {
+        "ok": true
+      },
+      "resultsApiStatus": 200,
+      "noStore": true,
+      "updatedAdminCopyServed": true
+    }
+  },
+  "waitingEmojiAndAcceleratingTransfer": {
+    "date": "2026-10-17",
+    "waitingEmoji": "New random emoji on every entry to waiting, reload and login; no immediate repeat, stable during polling and settings rerender; run and question changes detected even when intermediate phases were missed.",
+    "animation": {
+      "expressionHoldMs": 7000,
+      "transferTimeUnitMs": 1000,
+      "milestones": "1/2/4/8 points after 1/2/3/4 seconds",
+      "positiveBonusDurationSeconds": "1 + log2(bonus)",
+      "zero": "skip count",
+      "reducedMotion": "7-second hold, static total transition"
+    },
+    "verification": {
+      "participantBrowserCases": 9,
+      "projectorBrowserCases": 16,
+      "generalAndRestartBrowserCases": 10,
+      "result": "35 passed; syntax checks passed; screenshots reviewed at 1280x720 and 1920x1080"
+    },
+    "designReferences": [
+      "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/easing-function",
+      "https://github.com/emilkowalski/skills/blob/main/skills/apple-design/SKILL.md"
+    ],
+    "deployment": {
+      "backupDirectory": "/root/quiz-before-motion-update-20261017-031317",
+      "dataModifiedByDeployment": false,
+      "dataTableHashesUnchangedDuringDeployment": true,
+      "serverRestarted": false,
+      "deployedFiles": 5,
+      "hashesVerified": true
+    },
+    "publicHttpsVerification": "Healthy; both served JavaScript files exactly match tested SHA-256 hashes and use no-store."
+  },
+  "objectStorageImages": {
+    "date": "2026-10-17",
+    "implementation": "Server-side Sharp optimization, authenticated AWS SigV4 upload to Yandex Object Storage, immutable public object URLs, lazy voting images. Existing local images preserved.",
+    "settings": "Global across production/rehearsal; both key fields encrypted and redacted; saved-configuration probe verifies signed write, anonymous exact read and cleanup.",
+    "limits": {
+      "inputMiB": 10,
+      "iconMaxPixels": 384,
+      "cardLogoMaxPixels": 960,
+      "maxFrames": 200,
+      "maxAnimationSeconds": 120,
+      "decodedPixelBudget": 80000000,
+      "concurrentProcessingJobs": 1
+    },
+    "verification": {
+      "httpStorageCases": 31,
+      "storageBrowserCases": 3,
+      "existingHttpOauthRestartBrowserCases": 28,
+      "node24UnitCases": 16,
+      "result": "all passed",
+      "externalS3Tests": "local independent SigV4 mock and browser image mocks; actual cloud write/read requires organizer credentials"
+    },
+    "deployment": {
+      "backupDirectory": "/root/quiz-before-storage-20261017-085926",
+      "deployedFiles": 31,
+      "fileHashesVerified": true,
+      "changedTables": [],
+      "secretKeyPreserved": true,
+      "health": true,
+      "states": {
+        "production": {
+          "phase": "question_reveal",
+          "runId": 4,
+          "revision": 237
+        },
+        "rehearsal": {
+          "phase": "voting_closed",
+          "runId": 21,
+          "revision": 2872
+        }
+      },
+      "storageEnabled": false,
+      "storageKeyConfigured": false
+    },
+    "publicHttps": {
+      "http": {
+        "admin.js": {
+          "sha256Matches": true,
+          "cache": "no-store"
+        },
+        "participant.js": {
+          "sha256Matches": true,
+          "cache": "no-store"
+        },
+        "health": {
+          "ok": true
+        },
+        "cspAllowsStorage": true
+      },
+      "browser": {
+        "storage": {
+          "enabled": false,
+          "bucket": "posvyat2026",
+          "accessKeyIdSet": false,
+          "secretSet": false,
+          "lastTest": null
+        },
+        "productionCounts": {
+          "groups": 27,
+          "participants": 464,
+          "questions": 27
+        },
+        "serviceUpload": {
+          "optimizedWebp": true,
+          "immutable": true,
+          "testObjectRemoved": true
+        },
+        "adminBrowser": "settings and logout passed with trusted TLS",
+        "javascriptErrors": []
+      }
+    },
+    "liveStorageStatus": "Enabled; real Yandex S3 write, anonymous read, upload optimization, animated WebP, browser CSP and cleanup verified.",
+    "liveStorageVerification": {
+      "uploads": [
+        {
+          "name": "photo",
+          "inputBytes": 1558954,
+          "uploadSeconds": 3.08,
+          "contentType": "image/webp",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "outputBytes": 179358,
+          "anonymousRead": true,
+          "browserDimensions": {
+            "width": 960,
+            "height": 640
+          },
+          "loadedUnderRealCsp": true,
+          "decoded": {
+            "width": 960,
+            "height": 640,
+            "pages": 1
+          }
+        },
+        {
+          "name": "animation",
+          "inputBytes": 1422,
+          "uploadSeconds": 0.26,
+          "contentType": "image/webp",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "outputBytes": 848,
+          "anonymousRead": true,
+          "browserDimensions": {
+            "width": 400,
+            "height": 240
+          },
+          "loadedUnderRealCsp": true,
+          "decoded": {
+            "width": 400,
+            "height": 240,
+            "pages": 3,
+            "delay": [
+              80,
+              160,
+              240
+            ],
+            "loop": 3
+          }
+        }
+      ],
+      "enabledAfterSuccessfulProbe": true,
+      "eventDataUnchanged": true,
+      "javascriptErrors": [],
+      "storageEnabled": true,
+      "testObjectsRemoved": true,
+      "verifiedAtUtc": "2026-10-17T09:10:48.778494+00:00",
+      "probe": {
+        "ok": true,
+        "message": "Запись и публичное чтение Object Storage работают",
+        "at": "2026-10-17T09:08:32.122Z"
+      }
+    },
+    "existingMediaMigration": {
+      "verifiedAtUtc": "2026-10-17T09:18:38.950624+00:00",
+      "scope": "All referenced local group icons, voting images and event logos in production and rehearsal; inventory contained 27 production group icons only.",
+      "transfer": "Original WebP bytes preserved; all SHA-256 hashes match anonymous S3 downloads, Content-Type and immutable cache headers verified before database changes.",
+      "database": {
+        "backupDirectory": "/root/quiz-before-media-migration-20261017-091540",
+        "manifest": "/var/lib/initiation-quiz/migrations/s3-20261017-091540/manifest.json",
+        "uploadedFiles": 27,
+        "uploadedBytes": 685920,
+        "changedReferences": 27,
+        "changedGroups": 27,
+        "changedEnvironments": [
+          "production"
+        ],
+        "onlyImageReferencesAndRevisionChanged": true,
+        "originalLocalFilesPreserved": true,
+        "checkedOnCopy": false,
+        "unchangedTables": [
+          "answers",
+          "results",
+          "ballots",
+          "reveals",
+          "sessions",
+          "global_settings",
+          "oauth_states"
+        ]
+      },
+      "publicHttps": {
+        "production": {
+          "groups": 27,
+          "images": 27,
+          "localImageReferences": 0,
+          "phase": "setup"
+        },
+        "rehearsal": {
+          "groups": 2,
+          "images": 0,
+          "localImageReferences": 0,
+          "phase": "voting_closed"
+        },
+        "browser": {
+          "loadedImages": 27,
+          "directS3Requests": 27,
+          "javascriptErrors": [],
+          "trustedHttps": true
+        },
+        "health": {
+          "ok": true
+        }
+      },
+      "serverRestarted": false,
+      "originalLocalFilesDeleted": false,
+      "concurrentActivity": "Only image references and one revision increment per affected event were changed by the migration transaction; any organizer actions outside that transaction are preserved."
+    }
+  },
+  "groupVideoAnimations": {
+    "completedAt": "2026-10-17T10:51:50.912973+00:00",
+    "sourceFolder": "https://drive.google.com/drive/folders/1nABe9S72blYLPg5bafyJh_hJsz-wbsOs",
+    "groups": 27,
+    "nominalFps": 30,
+    "seconds": 397.0,
+    "gifBytes": 753401425,
+    "gifFrames": 11910,
+    "maxFrames": 510,
+    "widths": [
+      480
+    ],
+    "orderedSegmentsMatched": true,
+    "allGifAndMp4HashesVerified": true,
+    "infiniteGifLoopsVerified": true,
+    "webpBytes": 94169150,
+    "webpMaxBytes": 6127330,
+    "webpMinBytes": 888570,
+    "webpCount": 27,
+    "sourceVideosVerified": 27,
+    "blackFrames631": "Black flashes confirmed in original source within requested 49–64s interval; kept unchanged",
+    "siteFormat": "animated WebP",
+    "allS3ObjectsPublicAndSha256Verified": true,
+    "contentType": "image/webp",
+    "cacheControl": "public, max-age=31536000, immutable",
+    "databaseImport": "Atomic production mediaUrl replacement and revision increment; all other current fields and tables preserved",
+    "backup": "/var/lib/initiation-quiz/backups/before-group-media-20261017.sqlite",
+    "productionPhaseAtImport": "setup",
+    "browser": {
+      "adminPreviews": 27,
+      "mobileCardsExcludingOwnGroup": 26,
+      "animationVisiblyChanges": true,
+      "javascriptErrors": [],
+      "mobileHorizontalOverflow": false,
+      "productionVotingNotStartedForVerification": true
+    },
+    "serverMediaSupport": {
+      "maximumFrames": 600,
+      "timeoutSeconds": 30,
+      "maximumDecodedPixels": 80000000,
+      "inputLimitBytes": 10485760,
+      "unitTestsOnNode24": 10,
+      "result": "passed"
+    },
+    "importSyntheticChecks": 6,
+    "localArtifacts": "data/group-video-preparation/rendered",
+    "script": "tools/prepare_group_gifs.py",
+    "guide": "docs/group-video-gifs.md",
+    "renderScriptTests": {
+      "passed": 6,
+      "durationSeconds": 33.64
+    }
+  },
+  "votingOrder": {
+    "date": "2026-10-17",
+    "productionGroups": 27,
+    "matchesPerformanceOrder": true,
+    "configurableInAdmin": true,
+    "ownGroupOmitted": true,
+    "apiTestsPassed": 14,
+    "browserChecksPassed": true,
+    "productionRecordsPreserved": true,
+    "rehearsalPreserved": true,
+    "backup": "/root/quiz-before-voting-order-20261017-110642",
+    "artifacts": "data/voting-order-verification"
+  }
+}

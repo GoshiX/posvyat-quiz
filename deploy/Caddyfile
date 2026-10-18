@@ -1,0 +1,25 @@
+{
+	default_sni 91.84.97.114
+}
+
+https://91.84.97.114 {
+	tls {
+		issuer acme {
+			dir https://acme-v02.api.letsencrypt.org/directory
+			profile shortlived
+		}
+	}
+	redir /auth/yandex/start https://posvyat2026.h4ck.me{uri} 302
+	encode zstd gzip
+	reverse_proxy 127.0.0.1:3000
+}
+
+https://posvyat2026.h4ck.me {
+	tls {
+		issuer acme {
+			dir https://acme-v02.api.letsencrypt.org/directory
+		}
+	}
+	encode zstd gzip
+	reverse_proxy 127.0.0.1:3000
+}

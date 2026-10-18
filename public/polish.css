@@ -1,0 +1,78 @@
+/* Review adjustments checked at 320–390 px on phones and 1440 px on laptops. */
+.participant-header > .icon-button {
+  width: 48px;
+  height: 48px;
+}
+
+.rating-progress {
+  font-size: .75rem;
+  color: #a0a3ad;
+}
+
+.rating-label {
+  font-size: .75rem;
+  color: #a0a3ad;
+}
+
+.heart {
+  color: #8b8f9d;
+}
+
+.heart > span {
+  color: #a0a3ae;
+  font-size: .75rem;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.heart.filled > span {
+  color: #e3b8c0;
+}
+
+.heart[aria-pressed="true"] {
+  background: #e5afb80a;
+}
+
+.voting-footer > small {
+  font-size: .75rem;
+  color: #a0a3ad;
+}
+
+.admin-app .metric > i {
+  color: #969daa;
+  font-size: .75rem;
+}
+
+.admin-app .metric > strong > small {
+  color: #969daa;
+}
+
+.admin-app .section-heading p,
+.admin-app .operator-action > p {
+  font-size: .8rem;
+}
+
+.admin-app .data-table th {
+  color: #9ba3b1;
+  font-size: .75rem;
+}
+
+.admin-app .data-table td {
+  font-size: .85rem;
+}
+
+.admin-app .field small,
+.admin-app .table-note {
+  color: #9ba3b1;
+  font-size: .75rem;
+}
+
+@media (max-width: 360px) {
+  .hearts {
+    column-gap: 2px;
+  }
+
+  .heart {
+    min-height: 56px;
+  }
+}

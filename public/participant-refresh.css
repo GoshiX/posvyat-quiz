@@ -1,0 +1,136 @@
+/* Participant entry and waiting states. Other quiz interactions retain their layout. */
+.participant-app .login-shell {
+  max-width: 460px;
+  padding-top: 48px;
+  padding-bottom: max(40px, env(safe-area-inset-bottom));
+}
+
+.participant-app .login-brand {
+  margin-bottom: 52px;
+}
+
+.participant-app .event-wordmark {
+  font-size: .94rem;
+  letter-spacing: .11em;
+}
+
+.participant-app .login-card {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.participant-app .login-card h1 {
+  margin: 0 0 26px;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  letter-spacing: -.03em;
+  font-weight: 550;
+}
+
+.participant-app .yandex-login {
+  min-height: 56px;
+  padding: 16px 24px;
+  gap: 12px;
+  border-radius: 12px;
+  background: #fff;
+  color: #000;
+  box-shadow: none;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.participant-app .yandex-login:hover {
+  background: #fff;
+}
+
+.participant-app .yandex-logo {
+  display: block;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.participant-app .or-divider {
+  margin: 20px 0;
+  color: #92949d;
+}
+
+.participant-app .login-form {
+  gap: 10px;
+}
+
+.participant-app .login-form input {
+  min-height: 52px;
+  margin: 0;
+  padding: 13px 15px;
+  border-color: #35363e;
+  background: #17181b;
+  font-size: 1rem;
+}
+
+.participant-app .login-form input::placeholder {
+  color: #9597a0;
+}
+
+.participant-app .code-login {
+  min-height: 48px;
+  background: #25262c;
+  color: #d8dae1;
+  font-weight: 500;
+}
+
+.participant-app .login-note {
+  max-width: 310px;
+  margin: 24px auto 0;
+  color: #9698a2;
+  font-size: .78rem;
+  line-height: 1.6;
+}
+
+.participant-app .login-card > .form-error {
+  margin: -9px 0 20px;
+  overflow-wrap: anywhere;
+}
+
+.participant-app .participant-divider {
+  flex-shrink: 0;
+  align-self: center;
+  width: min(90vw, 414px);
+  height: 1px;
+  margin: 0;
+  border: 0;
+  background: #ffffff12;
+}
+
+.participant-app .waiting-state {
+  gap: 20px;
+  padding-bottom: 92px;
+}
+
+.participant-app .waiting-emoji {
+  display: block;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 3rem;
+  line-height: 1.3;
+}
+
+.participant-app .waiting-state h1 {
+  color: #d9dbe2;
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: -.035em;
+}
+
+@media (max-width: 360px) {
+  .participant-app .login-shell {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .participant-app .yandex-login {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

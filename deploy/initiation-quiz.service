@@ -1,0 +1,31 @@
+[Unit]
+Description=Initiation quiz and voting
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=quizapp
+Group=quizapp
+WorkingDirectory=/opt/initiation-quiz
+EnvironmentFile=/etc/initiation-quiz.env
+ExecStart=/opt/nodejs/current/bin/node /opt/initiation-quiz/server/index.mjs
+Restart=always
+RestartSec=3
+TimeoutStopSec=15
+UMask=0077
+LimitNOFILE=65536
+NoNewPrivileges=true
+CapabilityBoundingSet=
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+ReadWritePaths=/var/lib/initiation-quiz
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+
+[Install]
+WantedBy=multi-user.target
